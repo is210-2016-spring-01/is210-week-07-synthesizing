@@ -5,8 +5,6 @@
 import authentication
 import getpass
 
-myval = getpass.getpass('Candace')
-print myval
 
 
 def login(username, maxattempts=3):
