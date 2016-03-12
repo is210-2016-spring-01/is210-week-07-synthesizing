@@ -10,14 +10,15 @@ def get_matches(players):
         players (list): A list of players.
 
     Returns:
-        list: A newly created list of tuples
+        list: A new list of matchhups stored as a list of tuples.
 
     Examples
-        >>> import task_01
-        >>> task_01.get_matches(['Harry', 'Howard', 'Hugh'])
-        [('Harry', 'Howard'), ('Harry', 'Hugh'), ('Howard', 'Hugh')]
+    >>> import data
+    >>> print data
+    >>> print data.VERSUS
+    ['Fandral', 'Hogun', 'Volstagg', 'Sif', 'Amora', 'Lorelei', 'Balder', 'Frigga', 'Hermod', 'Gaea', 'Hoder', 'Tyr', 'Loki', 'Odin', 'Thor', 'Heimdall', 'Frey', 'Freya']
+    >>> print get_matches(['Volstagg', 'Sif', 'Odin'])
     """
-    task_01.get_matches([',', ',', ','])
-    list(enumerate(players))
-    for item in players:
-        print item
+    for i, item in enumerate(players):
+        # ...compute some result based on item ...
+        players[i]
