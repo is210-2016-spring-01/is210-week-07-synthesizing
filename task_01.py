@@ -16,9 +16,11 @@ def get_matches(players):
     >>> import data
     >>> print data
     >>> print data.VERSUS
-    ['Fandral', 'Hogun', 'Volstagg', 'Sif', 'Amora', 'Lorelei', 'Balder', 'Frigga', 'Hermod', 'Gaea', 'Hoder', 'Tyr', 'Loki', 'Odin', 'Thor', 'Heimdall', 'Frey', 'Freya']
+    ['Fandral', 'Hogun', 'Volstagg', 'Sif', 'Amora', 'Lorelei',\
+    'Balder', 'Frigga', 'Hermod', 'Gaea', 'Hoder', 'Tyr', 'Loki', \
+    'Odin', 'Thor', 'Heimdall', 'Frey', 'Freya']
     >>> print get_matches(['Volstagg', 'Sif', 'Odin'])
     """
-    for i, item in enumerate(players):
+    for i in enumerate(players):
         # ...compute some result based on item ...
-        players[i]
+        print get_matches(i)
