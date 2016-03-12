@@ -6,7 +6,6 @@ import authentication
 import getpass
 
 
-
 def login(username, maxattempts=3):
     """This function creates a login.
 
