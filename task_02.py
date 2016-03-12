@@ -6,7 +6,7 @@ import getpass
 import authentication
 
 
-def login(username, maxattempts=3):
+def login(username, maxattempts):
     """A function that logins in with username and password.
 
     Args:
@@ -22,7 +22,7 @@ def login(username, maxattempts=3):
         Please enter your password:
         Incorret username or password. You have 1 attempts left.
         Please enter your password:
-        Incorrect username or password: YOu have 0 attempts left.
+        Incorrect username or password: You have 0 attempts left.
 
         >>> task_02.login('veruca', '2')
         Please enter your password:
