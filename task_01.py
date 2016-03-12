@@ -23,4 +23,4 @@ def get_matches(players):
     """
     for i in enumerate(players):
         # ...compute some result based on item ...
-        print get_matches(i)
+        print i
