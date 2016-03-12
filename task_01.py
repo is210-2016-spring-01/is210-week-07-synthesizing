@@ -6,6 +6,7 @@
 def get_matches(players):
     """This docstring describes get matches.
 
+
     Args:
         players (list): A list of players.
 
@@ -21,6 +22,10 @@ def get_matches(players):
     'Odin', 'Thor', 'Heimdall', 'Frey', 'Freya']
     >>> print get_matches(['Volstagg', 'Sif', 'Odin'])
     """
-    for i in enumerate(players):
-        # ...compute some result based on item ...
-        print i
+    matchups = []
+    for playersa in enumerate(players):
+        for playerb in enumerate(players):
+            if playera[0] < playerb[0]:
+                matchups.append((playera[1], playerb[1]))
+
+    return matchups
