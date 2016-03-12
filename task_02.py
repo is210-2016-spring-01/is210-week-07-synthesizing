@@ -6,7 +6,7 @@ import getpass
 import authentication
 
 
-def login(username, maxattempts):
+def login(username, maxattempts=3):
     """A function that logins in with username and password.
 
     Args:
@@ -40,4 +40,5 @@ def login(username, maxattempts):
             print errormsg.format(maxattempts - attempted)
         else:
             return True
+
         return False
