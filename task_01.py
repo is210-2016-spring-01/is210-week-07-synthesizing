@@ -23,9 +23,9 @@ def get_matches(players):
     >>> print get_matches(['Volstagg', 'Sif', 'Odin'])
     """
     matchups = []
-    for playersa in enumerate(players):
-        for playerb in enumerate(players):
-            if playera[0] < playerb[0]:
-                matchups.append((playera[1], playerb[1]))
+    for player1 in enumerate(players):
+        for player2 in enumerate(players):
+            if player1[0] < player2[0]:
+                matchups.append((player1[1], player2[1]))
 
     return matchups
