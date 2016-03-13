@@ -5,7 +5,7 @@
 import getpass
 import authentication
 
-FailMESSAGE = 'Incorrect username or password. You have {0} attempts left.'
+FAILMESSAGE = 'Incorrect username or password. You have {0} attempts left.'
 
 
 def login(username, maxattempts):
