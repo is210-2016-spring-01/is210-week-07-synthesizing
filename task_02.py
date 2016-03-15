@@ -32,7 +32,7 @@ def login(username, maxattempts=3):
         password = getpass.getpass('Please enter your password: ')
         info = authentication.authenticate(username, password)
         attempts += 1
-        if authenticated is False:
+        if info is False:
             print fail_message.format(maxattempts - attempts)
         else:
             return True
