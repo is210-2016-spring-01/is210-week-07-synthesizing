@@ -6,7 +6,7 @@ import getpass
 import authentication
 
 
-def login(username, maxattempts):
+def login(username, maxattempts=3):
     """To verify one's account ID and password.
 
     Args:
@@ -27,13 +27,10 @@ def login(username, maxattempts):
     """
     fail_message = 'Incorrect username or password. You have {0} attempts left.'
     authenticated = False
-    attempts = 0
-    while authenticated is False and attempts < maxattempts:
+    while authenticated is False and maxattempts > 0:
         password = getpass.getpass('Please enter your password: ')
-        authentication.authenticate(username, password)
-        attempts += 1
-        if authenticated is False:
-            print fail_message.format(maxattempts - attempts)
-        else:
-            return True
-    return authenticated
+        info = authentication.authenticate(username, password)
+        if info is False:
+            maxattempts -= 1
+            print fail_message.format(maxattempts)
+    return info
