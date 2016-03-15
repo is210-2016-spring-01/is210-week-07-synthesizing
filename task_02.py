@@ -25,12 +25,15 @@ def login(username, maxattempts=3):
          Incorrect username of password. You have 0 attempts left.
          False'
     """
-    fail_message = 'Incorrect username or password. You have {0} attempts left.'
     authenticated = False
-    while authenticated is False and maxattempts > 0:
+    attempts = 0
+    fail_message = 'Incorrect username or password. You have {0} attempts left.'
+    while attempts < maxattempts and authenticated is False:
         password = getpass.getpass('Please enter your password: ')
         info = authentication.authenticate(username, password)
-        if info is False:
-            maxattempts -= 1
-            print fail_message.format(maxattempts)
-    return info
+        attempts += 1
+        if authenticated is False:
+            print fail_message.format(maxattempts - attempts)
+        else:
+            return True
+    return authenticated
